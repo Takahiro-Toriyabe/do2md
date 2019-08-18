@@ -16,7 +16,7 @@ class do2stmd:
         database = DatabaseFactory().create(*importer.extractInfo())
 
         if outfile == '':
-            outfile = infile.replace('.do', '.stmd')
+            outfile = infile.replace('.do', '_converted.stmd')
 
         with open(outfile, mode='w') as f:
             indent = ' ' * 4
@@ -125,10 +125,3 @@ class DatabaseFactory:
 
         database.sort()
         return database
-
-if __name__ == '__main__':
-    infile = 'C:/Users/Takah/Desktop/my_markstat_test.do'
-    foo = do2stmd()
-    foo.export(infile, infile.replace('.do', '.txt'))
-
-
