@@ -15,19 +15,6 @@ centile price, centile(75)
 /*md
 We find that the 75-th percentile is `s r(c_1)`.
 
-Now let us do the same with R. We'll use the `haven` library to read a 
-Stata file
-
-According to R, the 75-th percentile is `r round(q, 1)`. 
-
-Turns out R has 9 types of quantiles, the default is 7.  To get the same result 
-as `centile` specify type 6, which gives `r quantile(auto$price, 0.75, type=6)`.
-
-The Stata commands `summarize, detail`, `xtile`, `pctile` and `_pctile` use yet 
-another method, equivalent to R's type 2. These give the third quartile as
-`r quantile(auto$price, 0.75, type=2)`. The last three commands have an 
-`altdef` option that gives the same answer as `centile`.
-
 For a discussion of these methods see
 Hyndman, R. J. and Fan, Y. (1996) Sample quantiles in statistical packages, 
 *American Statistician* 50:361-365.
