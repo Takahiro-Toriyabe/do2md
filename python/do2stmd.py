@@ -125,3 +125,19 @@ class DatabaseFactory:
 
         database.sort()
         return database
+
+
+def getCmdArgs(args):
+    infile = args[1]
+    try:
+        outfile = args[2]
+    except IndexError:
+        outfile = ''
+    return [infile, outfile]
+
+
+if __name__ == '__main__':
+    import sys
+
+    converter = do2stmd()
+    converter.export(*getCmdArgs(sys.argv))
