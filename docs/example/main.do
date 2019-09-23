@@ -1,2 +1,2 @@
-local pwd "D:/GitHub/markstat-wrapper/docs/example"
-markstat_wrapper "`pwd'/src.do", output("`pwd'/result.md")
+local pwd "D:/GitHub/do2md/docs/example"
+do2md "`pwd'/src.do", output("`pwd'/result.md")

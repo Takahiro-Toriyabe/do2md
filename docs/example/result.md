@@ -2,7 +2,7 @@
 . clear all
 ```
 
-% Quantiles in Stata and R % Takahiro Toriyabe % 20 Sep 2019
+% Quantiles in Stata and R % Takahiro Toriyabe % 23 Sep 2019
 
 Stata and R compute percentiles differently. Let us load the `auto`
 dataset and compute the 75th percentile of `price` using Stata's

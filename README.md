@@ -1,4 +1,4 @@
-# markstat-wrapper
+# do2md
 Wrapper of markstat in Stata to facilitate dynamic document
 
 ## Prerequisite
@@ -8,7 +8,7 @@ Wrapper of markstat in Stata to facilitate dynamic document
 3. Use `whereis` to set the path of the Pandoc and LaTeX (See [Germán's web page](https://data.princeton.edu/stata/markdown/gettingStarted) for detail)
 4. If you make pdf file, copy [stata.sty](https://github.com/Takahiro-Toriyabe/markstat-wrapper/blob/master/docs/stata.sty) to the appropriate place (and run `mktexlsr` on your terminal to update style-file list in case of TeX Live)
 5. If your OS is Windows, you may need to install gnu-sed
-6. Copy and paste [markstat_wrapper.ado](https://github.com/Takahiro-Toriyabe/markstat-wrapper/blob/master/ado/markstat_wrapper.ado) and [do2stmd.py](https://github.com/Takahiro-Toriyabe/markstat-wrapper/blob/master/python/do2stmd.py) to `[adoPATH]/m/` (`[adoPATH]` may be "C:/ado/plus/")
+6. Copy and paste [do2md.ado](https://github.com/Takahiro-Toriyabe/markstat-wrapper/blob/master/ado/do2md.ado) and [do2stmd.py](https://github.com/Takahiro-Toriyabe/markstat-wrapper/blob/master/python/do2stmd.py) to `[adoPATH]/d/` (`[adoPATH]` may be "C:/ado/plus/")
 
 ```Stata
 ssc install markstat
@@ -39,10 +39,10 @@ md*/
 Stata command
 ```
 - See [src.do](https://github.com/Takahiro-Toriyabe/markstat-wrapper/blob/master/docs/example/src.do) for an example of the source file
-- Syntax of Stata command `markstat_wrapper` is `markstat_wrapper src_file, output(output_file)`
+- Syntax of Stata command `do2md` is `do2md src_file, output(output_file)`
   - src_file: Source file (.do)
   - output_file: output file name (.md)
 - For example,
   ```Stata
-  markstat_wrapper markstat_wrapper "src.do", output("result.md")
+  do2md "src.do", output("result.md")
   ```
